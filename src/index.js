@@ -31,7 +31,7 @@ function createFolderOrFileElement(item, type = null, isFirstLevel) {
       </div>
       <div class="action">
         <img src="/asset/edit.svg" alt="edit" class="edit-btn"/>
-        <img src="/asset/edit.svg" alt="delete" class="delete-btn" />
+        <img src="/asset/delete.svg" alt="delete" class="delete-btn" />
       </div>
     </div>
     `;
