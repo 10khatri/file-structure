@@ -26,12 +26,12 @@ function createFolderOrFileElement(item, type = null, isFirstLevel) {
     explorerDiv.innerHTML = `
     <div class="container">
       <div class="file-info">
-        <img src="file.svg" alt="file" class="file" />
+        <img src="/asset/file.svg" alt="file" class="file" />
         <p>${item.text}</p>
       </div>
       <div class="action">
-        <img src="edit.svg" alt="edit" class="edit-btn"/>
-        <img src="delete.svg" alt="delete" class="delete-btn" />
+        <img src="/asset/edit.svg" alt="edit" class="edit-btn"/>
+        <img src="/asset/edit.svg" alt="delete" class="delete-btn" />
       </div>
     </div>
     `;
@@ -39,16 +39,16 @@ function createFolderOrFileElement(item, type = null, isFirstLevel) {
     explorerDiv.innerHTML = `
     <div class="container">
       <div class="folder-info">
-        <img src="arrow-up.svg" alt="arrow" class="arrow" id="up" />
-        <img src="folder.svg" alt="folder" class="folder" />
+        <img src="/asset/arrow-up.svg" alt="arrow" class="arrow" id="up" />
+        <img src="/asset/folder.svg" alt="folder" class="folder" />
         <p>${item.text}</p>
       </div>
 
       <div class="action">
-        <img src="folder-add.svg" alt="folder" class="addFolder" />
-        <img src="file-add.svg" alt="file" class="addFile" />
-        <img src="edit.svg" alt="edit" class="edit-btn" />
-        <img src="delete.svg" alt="delete" class="delete-btn" />
+        <img src="/asset/folder-add.svg" alt="folder" class="addFolder" />
+        <img src="/asset/file-add.svg" alt="file" class="addFile" />
+        <img src="/asset/edit.svg" alt="edit" class="edit-btn" />
+        <img src="/asset/delete.svg" alt="delete" class="delete-btn" />
       </div>
     </div>
     <div class="items-container"></div>
@@ -60,17 +60,17 @@ function createFolderOrFileElement(item, type = null, isFirstLevel) {
 
   folderInfo?.addEventListener("click", () => {
     if (itemsContainer.style.display === "none") {
-      arrow.src = "arrow-down.svg";
+      arrow.src = "/asset/arrow-down.svg";
       itemsContainer.style.display = "block";
     } else {
-      arrow.src = "arrow-up.svg";
+      arrow.src = "/asset/arrow-up.svg";
       itemsContainer.style.display = "none";
     }
   });
 
   const addFolderBtn = explorerDiv?.querySelector(".addFolder");
   addFolderBtn?.addEventListener("click", () => {
-    arrow.src = "arrow-down.svg";
+    arrow.src = "/asset/arrow-down.svg";
     explorerDiv
       .querySelector(".items-container")
       .appendChild(createItemInput(item, explorerDiv));
@@ -79,7 +79,7 @@ function createFolderOrFileElement(item, type = null, isFirstLevel) {
   const addFileBtn = explorerDiv?.querySelector(".addFile");
   console.log({ addFileBtn });
   addFileBtn?.addEventListener("click", () => {
-    arrow.src = "./arrow-down.svg";
+    arrow.src = "/asset/arrow-down.svg";
     explorerDiv
       .querySelector(".items-container")
       .appendChild(createItemInput(item, explorerDiv, "file"));
