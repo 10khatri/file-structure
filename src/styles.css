@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: rgb(36, 36, 36);
+  color: white;
+  margin: 20px;
+}
+
+img {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+.createItemContainer {
+  margin: 5px 0px;
+}
+input,
+button {
+  cursor: pointer;
+  color: black;
+  border: none;
+  padding: 0 20px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: rgb(251, 249, 249);
+}
+
+button {
+  width: 110px;
+  margin-left: 5px;
+}
+.container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.folder-info,
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.action {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
